@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QRコード作成</title>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	<h1>QRコード作成</h1>
+	<!-- actionにURIを指定する事でエンドポイント(URIで設定した関数)が実行される -->
+	<form action="/qrcode" method="GET">
+		<label for="data">入力データ:</label>
+		<input type="text" name="data" id="data">
+		<button type="submit">作成</button>
+	</form>
+	<!-- QRコードを表示するためのエリア -->
+    <br>
+    <p>出力したQRコード</p>
+	<!--         ↓二重に波括弧でくくる事で入力値dataが変数としてHTML画面に出力できる -->
+    <p>データ名:{{ data }}</p>
+	<img src='static/qrcode.png'>
+</body>
+</html>
