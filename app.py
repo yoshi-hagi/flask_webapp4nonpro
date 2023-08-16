@@ -22,7 +22,7 @@ def get_qrcode():
     with open(file_path, 'wb') as f:
         f.write(img.getvalue())
     return render_template('index.html', data=data)
-# render_templateでは引数に変数を渡すだけでテンプレート上で変数を使うことが出来る
+    # render_templateでは引数に変数を渡すだけでテンプレート上で変数を使うことが出来る
 
 if __name__ == '__main__':
     app.run(debug=True)
